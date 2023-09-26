@@ -8,8 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'custom-splash',
     pathMatch: 'full'
+  },
+  {
+    path: 'custom-splash',
+    loadChildren: () => import('./custom-splash/custom-splash.module').then( m => m.CustomSplashPageModule)
+  },
+  {
+    path: 'onboard-container',
+    loadChildren: () => import('./onboard-container/onboard-container.module').then( m => m.OnboardContainerPageModule)
   },
 ];
 
