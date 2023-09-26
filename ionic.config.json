@@ -1,0 +1,7 @@
+{
+  "name": "drrmojaen-admin-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
