@@ -1,0 +1,78 @@
+
+<!-- Registration Form 2 -->
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <app-form2></app-form2>
+
+    <div class="forms">
+      <form #form="ngForm" (ngSubmit)="formSubmit(form)">
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs" 
+            type="number"
+            label="House Number" 
+            labelPlacement="floating" 
+            ngModel name="houseNo">
+          </ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs" 
+            type="text"
+            label="Purok/Street" 
+            labelPlacement="floating" 
+            ngModel name="street"
+            #streetHandler="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <div class="note" *ngIf="(streetHandler.dirty || streetHandler.touched) && !streetHandler.valid">
+          <ion-note>Please enter your Street/Purok.</ion-note>
+        </div>
+
+        <ion-item lines="none">
+          <ion-select class="inputs" type="text" label="Barangay" labelPlacement="floating" 
+            ngModel name="barangay" #barangayHandler="ngModel" required>
+            <ion-select-option value="Calabasa">Calabasa</ion-select-option>
+            <ion-select-option value="Don Mariano Marcos">Don Mariano Marcos</ion-select-option>
+            <ion-select-option value="Hilera">Hilera</ion-select-option>
+            <ion-select-option value="Imbunia">Imbunia</ion-select-option>
+            <ion-select-option value="Imelda Poblacion">Imelda Poblacion</ion-select-option>
+            <ion-select-option value="Lambakin">Lambakin</ion-select-option>
+            <ion-select-option value="Langla">Langla</ion-select-option>
+            <ion-select-option value="Magsalisi">Magsalisi</ion-select-option>
+            <ion-select-option value="Malabon-Kaingin">Malabon-Kaingin</ion-select-option>
+            <ion-select-option value="Marawa">Marawa</ion-select-option>
+            <ion-select-option value="Niyugan">Niyugan</ion-select-option>
+            <ion-select-option value="Ocampo-Rivera">Ocampo-Rivera</ion-select-option>
+            <ion-select-option value="Pakul">Pakul</ion-select-option>
+            <ion-select-option value="Pamacpacan">Pamacpacan</ion-select-option>
+            <ion-select-option value="Pinanggaan">Pinanggaan</ion-select-option>
+            <ion-select-option value="Putlod">Putlod</ion-select-option>
+            <ion-select-option value="San Jose">San Jose</ion-select-option>
+            <ion-select-option value="San Josef">San Josef</ion-select-option>
+            <ion-select-option value="San Pablo">San Pablo</ion-select-option>
+            <ion-select-option value="San Roque">San Roque</ion-select-option>
+            <ion-select-option value="San Vicente">San Vicente</ion-select-option>
+            <ion-select-option value="Santa Rita">Santa Rita</ion-select-option>
+            <ion-select-option value="Santo Tomas North">Santo Tomas North</ion-select-option>
+            <ion-select-option value="Santo Tomas South">Santo Tomas South</ion-select-option>
+            <ion-select-option value="Sapang">Sapang</ion-select-option>
+            <ion-select-option value="Ulanin-Pitak">Ulanin-Pitak</ion-select-option>
+            <ion-select-option value="Dampulan">Dampulan</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <div class="note" *ngIf="(barangayHandler.dirty || barangayHandler.touched) && !barangayHandler.valid">
+          <ion-note>Please select your Barangay.</ion-note>
+        </div>
+
+        <div class="btn">
+          <ion-button class="backBtn" routerLink="/registration1">Back</ion-button>
+          <ion-button class="nextBtn" routerLink="/registration3" type="submit" [disabled]="!form.valid">Next</ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

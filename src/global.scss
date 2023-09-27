@@ -24,3 +24,236 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+ion-content {
+    scroll-behavior: smooth;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+
+    --swiper-pagination-color: #0d8713;
+    --swiper-pagination-bullet-inactive-color: #363636;
+    --swiper-pagination-bullet-height: 11px;
+    --swiper-pagination-bullet-width: 11px;
+    --swiper-pagination-bullet-horizontal-gap: 7px;
+}
+
+ion-button {
+    text-transform: none;
+}
+
+// Loading
+ion-loading.customLoading {
+    --background: #fff;
+    --spinner-color: #3b973e;
+
+    font-family: Tahoma;
+    font-size: 16px;
+    color: #3b973e;
+}
+
+// Tab Buttons
+ion-tab-bar {
+    background-color: #fff;
+    border: none;
+}
+
+ion-tab-button {
+    background-color: #fff;
+}
+
+ion-tab-button.pressed {
+    ion-icon {
+        color: #0b580f;
+    }
+    ion-label {
+        color: #0b580f;
+    }
+}
+
+ion-icon.tab {
+    color: #adadad;
+    background: none;
+
+    font-size: 30px;
+}
+
+ion-label {
+    color: #4c4c4c;
+
+    font-family: Tahoma;
+    font-size: 13px;
+}
+
+// Action Sheet
+ion-action-sheet.customActionSheet {
+    --background: #fff;
+    --color: #000;
+    --button-color: #000;
+    --backdrop-opacity: 0.5;
+
+    .action-sheet-title {
+        font-size: 20px;
+    }
+
+    .ok {
+        .action-sheet-icon {
+            --color: #0d8713;
+        }
+
+        color: #0d8713;
+        text-transform: none;
+        border: none;
+    }
+
+    .no {
+        .action-sheet-icon {
+            --color: rgb(255, 0, 0);
+        }
+
+        color: rgb(255, 0, 0);
+        text-transform: none;
+        border: none;
+    }
+}
+
+ion-alert.confirm {
+    color: #0d8713;
+}
+
+ion-alert.cancel {
+    color: rgb(255, 0, 0);
+}
+
+// Failed Alert
+ion-alert.customAlert {
+    --background: #fff;
+    --color: #000;
+
+    .alert-title {
+        color: rgb(255, 0, 0);
+    }
+
+    .alert-message {
+        color: #4c4c4c;
+    }
+
+    .ok {
+        color: #0d8713;
+        text-transform: none;
+    }
+
+    .no {
+        color: rgb(255, 0, 0);
+        text-transform: none;
+    }
+
+    .confirm {
+        color: #0d8713;
+    }
+    .cancel {
+        color: rgb(255, 0, 0);
+    }
+}
+
+// Success Alert
+ion-alert.alert {
+    --background: #fff;
+    --color: #000;
+
+    .alert-title {
+        color: #0d8713;
+    }
+
+    .alert-message {
+        color: #4c4c4c;
+    }
+
+    .ok {
+        color: #0d8713;
+        text-transform: none;
+    }
+
+    .no {
+        color: rgb(255, 0, 0);
+        text-transform: none;
+    }
+
+    .confirm {
+        color: #0d8713;
+    }
+    .cancel {
+        color: rgb(255, 0, 0);
+    }
+}
+
+// Signout Button
+ion-alert.signout {
+    --background: #fff;
+    --color: #000;
+
+    .alert-title {
+        color: #0d8713;
+        font-size: 16px;
+    }
+
+    .alert-message {
+        color: #4c4c4c;
+    }
+
+    .ok {
+        color: #0d8713;
+        text-transform: none;
+    }
+
+    .no {
+        color: rgb(255, 0, 0);
+        text-transform: none;
+    }
+
+    .confirm {
+        color: #0d8713;
+    }
+    .cancel {
+        color: rgb(255, 0, 0);
+    }
+}
+
+// Refresher
+ion-refresher.refresher-native ion-spinner {
+    color: var(--spinner-color, #0d8713);
+}
+
+ion-refresher.refresher-native .arrow-container ion-icon {
+    color: #0d8713;
+}
+
+// Popover
+ion-popover {
+    --box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
+    
+    --width: 45%;
+
+    ion-item.edit {
+        --ripple-color: #0d8713;
+        .editIcon {
+            font-size: 20px;
+            color: #0d8713;
+        }
+    }
+
+    ion-item.delete {
+        --ripple-color: rgb(255, 0, 0);
+
+        .delIcon {
+            font-size: 20px;
+            color: rgb(255, 0, 0);
+        }
+    }
+}
+
+ion-popover::part(backdrop) {
+    background-color: transparent;
+}

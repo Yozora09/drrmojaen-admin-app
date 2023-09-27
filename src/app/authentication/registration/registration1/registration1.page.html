@@ -1,0 +1,111 @@
+
+<!-- Registration Form 1 -->
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <app-landing-btn routerLink="/landing-page"></app-landing-btn>
+    <app-form1></app-form1>
+
+    <div class="forms">
+      <form #form="ngForm" (ngSubmit)="formSubmit(form)">
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs" 
+            type="text"
+            label="First Name" 
+            labelPlacement="floating" 
+            ngModel name="firstName"
+            #firstNameHandler="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <div class="note" *ngIf="(firstNameHandler.dirty || firstNameHandler.touched) && !firstNameHandler.valid">
+          <ion-note>Please enter your First Name.</ion-note>
+        </div>
+
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs" 
+            type="text"
+            label="Middle Name" 
+            labelPlacement="floating"
+            ngModel name="middleName">
+          </ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs" 
+            type="text"
+            label="Last Name" 
+            labelPlacement="floating"
+            ngModel name="lastName" 
+            #lastNameHandler="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <div class="note" *ngIf="(lastNameHandler.dirty || lastNameHandler.touched) && !lastNameHandler.valid">
+          <ion-note>Please enter your Last Name.</ion-note>
+        </div>
+
+        <ion-item lines="none">
+          <ion-select
+            class="inputs" 
+            type="text"
+            label="Sex" 
+            labelPlacement="floating" 
+            ngModel name="sex"
+            #sexHandler="ngModel"
+            required>
+            <ion-select-option value="Male">Male</ion-select-option>
+            <ion-select-option value="Female">Female</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <div class="note" *ngIf="(sexHandler.dirty || sexHandler.touched) && !sexHandler.valid">
+          <ion-note>Please choose your Sex.</ion-note>
+        </div>
+
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs"
+            label="Contact Number" 
+            labelPlacement="floating"
+            [maskito]="contactMasking"
+            [maskitoElement]="maskPredicate"            
+            ngModel name="contactNo" 
+            #contactHandler="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <div class="note" *ngIf="(contactHandler.dirty || contactHandler.touched) && !contactHandler.valid">
+          <ion-note>Please enter your Contact Number.</ion-note>
+        </div>
+
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs" 
+            type="date"
+            label="Birthday" 
+            labelPlacement="floating"
+            min="1940-01-01" max="2008-12-31" 
+            ngModel name="birthDate" 
+            #birthDateHandler="ngModel"
+            required>
+          </ion-input>
+          <ion-icon slot="end" name="calendar"></ion-icon>
+        </ion-item>
+        <div class="note" *ngIf="(birthDateHandler.dirty || birthDateHandler.touched) && !birthDateHandler.valid">
+          <ion-note>Please enter your Birthday.</ion-note>
+        </div>
+
+        <div class="btn">
+          <ion-button class="nextBtn" type="submit" routerLink="/registration2" [disabled]="!form.valid">Next</ion-button>
+        </div>
+      </form>
+
+      <div class="loginNow">
+        <p class="text">Already have an account? <a [routerLink]="['/login']" routerLinkActive="router-link-active" >Login Now</a></p>
+      </div>
+    </div>
+  </div>
+</ion-content>

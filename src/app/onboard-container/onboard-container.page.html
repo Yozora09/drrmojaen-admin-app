@@ -1,13 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>onboard-container</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">onboard-container</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <swiper-container [pagination]="{clickable: true}" [keyboard]="true" effect="coverflow">
+    <swiper-slide>
+      <app-onboard1></app-onboard1>
+    </swiper-slide>
+
+    <swiper-slide>
+      <app-onboard2></app-onboard2>
+    </swiper-slide>
+
+    <swiper-slide>
+      <app-onboard3></app-onboard3>
+      <app-start-btn routerLink="/landing-page"></app-start-btn>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>

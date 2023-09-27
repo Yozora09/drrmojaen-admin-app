@@ -1,0 +1,34 @@
+
+// Form 2 Header CSS Properties
+
+.headers {
+    display: block;
+    position: relative;
+
+    top: 2rem;
+
+    p.head {
+        font-family: Consolas;
+        font-weight: bold;
+        font-size: 25.5px;
+    
+        color: #4c4c4c;
+    
+        margin-bottom: 1%;
+    }
+}
+
+p.subhead {
+    font-family: Tahoma;
+    font-size: 17px;
+
+    color: #4c4c4c;
+}
+
+p.label {
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 17px;
+
+    color: #4c4c4c;
+}

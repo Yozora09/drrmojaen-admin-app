@@ -1,0 +1,65 @@
+
+<!-- Registration Form 3 -->
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <app-return-btn routerLink="/registration2"></app-return-btn>
+    <app-form3></app-form3>
+    
+    <div class="profilePic">
+      <ion-avatar class="template">
+        <img [src]="defaultImg" *ngIf="!imageHandler">
+        <img [src]="imageHandler" *ngIf="newImg">
+      </ion-avatar>
+
+      <div class="add">
+        <ion-fab>
+          <ion-fab-button size="small" (click)="takePicture()">
+            <ion-icon name="camera"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </div>
+    </div>
+
+    <div class="forms">
+      <form #form="ngForm" (ngSubmit)="formSubmit(form)">
+
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs" 
+            type="email" email
+            label="Email" 
+            labelPlacement="floating"
+            ngModel name="email"
+            #emailHandler="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <div class="note" *ngIf="(emailHandler.dirty || emailHandler.touched) && !emailHandler.valid">
+          <ion-note>Please enter a valid Email.</ion-note>
+        </div>
+
+        <ion-item lines="none">
+          <ion-input 
+            class="inputs" 
+            [type]="passwordType"
+            label="Password" 
+            labelPlacement="floating"
+            minlength="8"
+            ngModel name="password"
+            #passwordHandler="ngModel"
+            required>
+          </ion-input>
+          <ion-icon slot="end" name="{{ passwordShown ? 'eye' : 'eye-off' }}" (click)="showPass()"></ion-icon>
+        </ion-item>
+        <div class="note" *ngIf="(passwordHandler.dirty || passwordHandler.touched) && !passwordHandler.valid">
+          <ion-note>Please enter a Password.</ion-note>
+        </div>
+
+        <div class="btn">
+          <ion-button class="regBtn" shape="round" type="submit" [disabled]="!form.valid">Register</ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,27 @@
+
+// Get Started Button CSS Properties
+ion-button.button {
+    --background: #0d8713;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    position: absolute;
+    overflow: hidden;
+
+    top: 85%;
+    left: 4.6%;
+    right: 0;
+  
+    border: none;
+  
+    width: 90%;
+    height: 50px;
+    border-radius: 50px;
+    
+    font-family: Tahoma;
+    font-size: 20px;
+}

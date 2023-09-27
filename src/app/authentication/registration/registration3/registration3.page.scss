@@ -1,0 +1,86 @@
+
+// Registration Form 3 CSS Properties
+
+ion-fab-button {
+    --background: #aeaeae;
+}
+
+.container {
+   padding: 20px;
+
+   .profilePic {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    ion-avatar {
+         outline: 1.5px solid #000;
+
+         width: 180px;
+         height: 180px;
+    }
+
+    .add {
+         position: relative;
+         top: 7.8rem;
+         left: -3.4rem;
+    }
+  }
+
+   .forms {
+       display: block;
+       position: relative;
+  
+       top: 1rem;
+
+       .props {
+         display: none;
+       }
+
+       ion-item {
+           --background: none;
+
+           border-bottom: 1.5px solid #aeaeae;
+      
+           margin-top: 4%;
+      
+           ion-input.inputs {
+                color: #000;
+           }
+      
+           ion-icon {
+                color: #0d8713;
+           }
+      }
+      
+      .note {
+           display: block;
+           margin-top: 6px;
+           margin-left: 4%;
+      
+           ion-note {
+                color: rgb(255, 0, 0);
+                font-family: Tahoma;
+           }
+      }
+      
+      .btn {
+           margin-top: 4rem;
+      
+           ion-button {
+                --background: #0d8713
+           }
+
+           .regBtn {
+              display: flex;
+              justify-content: center;
+
+              width: 100%;
+              height: 50px;
+              
+              font-family: Tahoma;
+              font-size: 20px;
+           }
+      }
+  }
+}

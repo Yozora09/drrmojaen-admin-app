@@ -1,0 +1,82 @@
+
+// Registration Form 1 CSS Properties
+
+.container {
+    padding: 20px;
+
+    .forms {
+        display: block;
+        position: relative;
+   
+        top: -2rem;
+
+        ion-item {
+            --background: none;
+       
+            margin-top: 4%;
+
+            border-bottom: 1.5px solid #aeaeae;
+       
+            ion-input.inputs {
+                 color: #000;
+            }
+            
+            ion-select.inputs {
+                 color: #000;
+            }
+       
+            ion-icon {
+                 color: #0d8713;
+            }
+       }
+
+       .note {
+            display: block;
+            margin-top: 6px;
+            margin-left: 4%;
+    
+            ion-note {
+                color: rgb(255, 0, 0);
+                font-family: Tahoma;
+            }
+        }
+
+        .btn {
+            position: fixed;
+            right: 1.1rem;
+       
+            margin-top: 5%;
+       
+            ion-button {
+                 --background: #0d8713
+            }
+       
+            .nextBtn {
+                 display: flex;
+                 position: relative;
+            
+                 width: max-content;
+                 height: 40px;
+            
+                 font-family: Tahoma;
+                 font-size: 20px;
+            }
+       }
+
+       .loginNow {
+            display: flex;
+            position: relative;
+            justify-content: center;
+    
+            margin-top: 5rem;
+    
+            p.text {
+                color: #000;
+            }
+    
+            a {
+                color: #3b973e;
+            }
+        }
+    }
+}

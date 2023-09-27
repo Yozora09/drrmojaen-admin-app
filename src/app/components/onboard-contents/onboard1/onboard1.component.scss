@@ -1,0 +1,111 @@
+
+// Onboard 1 CSS Properties
+
+.container {
+    padding: 25px;
+}
+
+.image {
+    position: relative;
+
+    top: 25px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img {
+    position: relative;
+
+    top: 35px;
+    left: 0;
+}
+
+.cyclone {
+    width: 120px;
+    height: 120px;
+
+    animation: cycAnim 1s linear 0s infinite reverse forwards;
+}
+
+.eq {
+    width: 120px;
+    height: 120px;
+
+    animation: eqAnim 2s linear 0s infinite normal forwards;
+}
+
+.flood {
+    width: 130px;
+    height: auto;
+}
+
+.header {
+    position: relative;
+
+    top: 30px;
+}
+
+.sub {
+    position: relative;
+
+    top: 40px;
+}
+
+h1 {
+    color: #4c4c4c;
+
+    font-size: 25px;
+    font-family: Tahoma;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+p {
+    color: #4c4c4c;
+    
+    font-size: 18px;
+    font-family: Tahoma;
+
+    text-align: center;
+
+}
+
+@keyframes cycAnim {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes eqAnim {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateX(-5px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateX(5px);
+	}
+
+	80% {
+		transform: translateX(5px);
+	}
+
+	90% {
+		transform: translateX(-5px);
+	}
+}

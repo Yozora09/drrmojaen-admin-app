@@ -1,0 +1,61 @@
+
+// Landing Page CSS Properties
+
+.container {
+    padding: 30px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    top: 105px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    
+    position: relative;
+    top: 105px;
+}
+
+.sub {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    top: 80px;
+}
+
+.logo {
+    width: 185px;
+    height: 185px;
+}
+
+p.head {
+    color: #4c4c4c;
+    text-align: center;
+
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+p.text {
+    color: #4c4c4c;
+    text-align: center;
+
+    font-family: Tahoma;
+    font-size: 18px;
+}
+
+.buttons {
+    display: block;
+    justify-content: center;
+
+    position: relative;
+
+    top: 6rem;
+}
